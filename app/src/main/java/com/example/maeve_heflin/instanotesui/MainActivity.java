@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.drawer_layout_test);
         mDrawerLayout = findViewById(R.id.drawer_layout);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionbar = getSupportActionBar();
@@ -34,8 +36,24 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, LoginActivity.class));
             }
         });
-
     }
+
+
+
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        MenuItem item = menu.findItem(R.id.nav_notes);
+//        item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+//
+//            @Override
+//            public boolean onMenuItemClick(MenuItem item) {
+//                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+//                return true;
+//            }
+//        });
+//        return true;
+//    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -45,5 +63,21 @@ public class MainActivity extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void openNotes(MenuItem item) {
+        startActivity(new Intent(MainActivity.this, LoginActivity.class));
+    }
+
+    public void openCamera(MenuItem item) {
+        startActivity(new Intent(MainActivity.this, LoginActivity.class));
+    }
+
+    public void openAbout(MenuItem item) {
+        startActivity(new Intent(MainActivity.this, LoginActivity.class));
+    }
+
+    public void openSettings(MenuItem item) {
+        startActivity(new Intent(MainActivity.this, LoginActivity.class));
     }
 }

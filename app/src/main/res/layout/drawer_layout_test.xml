@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
 
-    <!-- Layout to contain contents of main body of screen (drawer will slide over this) -->
+    <!-- Layout to contain contents of main body of screen (drawer will go over this) -->
     <FrameLayout
         android:id="@+id/content_frame"
         android:layout_width="match_parent"
@@ -23,15 +23,6 @@
             android:theme="@style/custom_toolbar" />
             <!--android:theme="@style/ThemeOverlay.AppCompat.ActionBar"-->
             <!--/>-->
-
-        <!--<SearchView-->
-            <!--android:layout_width="210dp"-->
-            <!--android:layout_height="55dp"-->
-            <!--android:layout_gravity="end"-->
-            <!--android:textColor="@android:color/white"-->
-            <!--android:textColorPrimary="@android:color/white"-->
-            <!--android:textColorSecondary="@android:color/white"-->
-            <!--android:queryHint="Search notes" />-->
 
         <TextView
             android:id="@+id/settings_title"
